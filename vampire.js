@@ -40,9 +40,10 @@ class Vampire {
     }
     if (!currentVampire.creator && vampire.creator) {
       return true;
-    }  else if (currentVampire.creator && !vampire.creator){
+    } else if (currentVampire.creator && !vampire.creator) {
       return false;
     }
+
   }
 
   /** Stretch **/
@@ -53,6 +54,35 @@ class Vampire {
   // * when comparing Ansel and Sarah, Ansel is the closest common anscestor.
   // * when comparing Ansel and Andrew, Ansel is the closest common anscestor.
   closestCommonAncestor(vampire) {
+
+  }
+
+  // deep tree traversal
+
+  // Returns the vampire object with that name, or null if no vampire exists with that name
+  vampireWithName(name) {
+
+    
+
+  }
+
+  // Returns the total number of vampires that exist
+  get totalDescendents() {
+
+    let total = 0;
+
+    total++;
+
+    for (const spawn of this.offspring) {
+      total += spawn.totalDescendents;
+    }
+
+    return total;
+
+  }
+
+  // Returns an array of all the vampires that were converted after 1980
+  get allMillennialVampires() {
 
   }
 }
